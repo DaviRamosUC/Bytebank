@@ -9,6 +9,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt'
 import { DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app-routing.module';
 
 registerLocaleData(localePt, 'pt');
 
@@ -22,6 +23,7 @@ registerLocaleData(localePt, 'pt');
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt' }, { provide: DEFAULT_CURRENCY_CODE, useValue: "BR" }],
   bootstrap: [AppComponent]
