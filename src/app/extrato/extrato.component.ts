@@ -15,9 +15,7 @@ export class ExtratoComponent implements OnInit {
   constructor(private service: TransferenciaService) { }
 
   ngOnInit(): void {
-    this.service.todas().subscribe((transferencias: Transferencia[])=> {
-      this.transferencias = transferencias;
-    })
+    this.transferencias= this.service.todas();
   }
 
 }
